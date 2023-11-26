@@ -30,3 +30,19 @@ def decoder_filter(text):
         else:
             result += i
     return result
+
+filters = {  # Словарь с описанием фильтров
+    1: {"name": "Replace Filter",
+        "description": "Преобразует текст в формат Replace (заменяет букву 'а' на... , а впрочем догадайся сам.).\n",
+        "function": replacement_filter},
+    2: {"name": "SHOUTING Filter",
+        "description": "Преобразует текст в формат SHOUTING (Кричащий текст).\n",
+        "function": shouting_filter},
+    3: {"name": "Encoder Filter",
+        "description": "Преобразует текст в формат Encoder (Шифрует текст шифром Цезаря. Писать прописными русскими буквами 'ПРИВЕТ!').\n",
+        "function": encoder_filter},
+    4: {"name": "Decoder Filter",
+        "description": "Преобразует текст в формат Decoder (Расшифровывает текст, зашифрованный шифром Цезаря. Писать прописными русскими буквами 'ПРИВЕТ!').\n",
+        "function": decoder_filter},
+    0: {"name": "Выход"}
+}

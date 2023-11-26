@@ -1,4 +1,4 @@
-import filters
+from filters import filters
 
 menu = ("""
 Меню фильтров:
@@ -28,13 +28,3 @@ while True:
     if yes_no_question == 'да':
         text = input('введите текст:\n')
         print(filters[f_choice]['function'](text))
-
-
-
-
-
-
-
-
-
-
